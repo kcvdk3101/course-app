@@ -5,10 +5,16 @@ import PropTypes from "prop-types";
 import { coursesActions } from "../../redux/actions/coursesActions";
 import { authorsActions } from "../../redux/actions/authorsActions";
 import { toast } from "react-toastify";
-import CourseList from "./CourseList.jsx";
 import Spinner from "../common/Spinner.jsx";
+import ManageCourseList from "./ManageCourseList.jsx";
 
-const CoursesPage = ({ courses, loadCourses, getAuthors, loading, deleteCourse }) => {
+const CoursesPage = ({
+  courses,
+  loadCourses,
+  getAuthors,
+  loading,
+  deleteCourse,
+}) => {
   const [redirectToAddCoursePage, setRedirectToAddCoursePage] = useState(false);
 
   useEffect(() => {
@@ -34,7 +40,10 @@ const CoursesPage = ({ courses, loadCourses, getAuthors, loading, deleteCourse }
     <>
       {redirectToAddCoursePage && <Redirect to="/course" />}
       <h1>Courses</h1>
-      <button className="btn btn-primary" onClick={() => setRedirectToAddCoursePage(true)}>
+      <button
+        className="btn btn-primary"
+        onClick={() => setRedirectToAddCoursePage(true)}
+      >
         Add course
       </button>
       {loading ? (
@@ -42,7 +51,7 @@ const CoursesPage = ({ courses, loadCourses, getAuthors, loading, deleteCourse }
       ) : courses.length === 0 ? (
         <h2>No more courses</h2>
       ) : (
-        <CourseList courses={courses} onDelete={handleDeleteCourse} />
+        <ManageCourseList courses={courses} onDelete={handleDeleteCourse} />
       )}
     </>
   );
@@ -64,7 +73,8 @@ function mapStateToProps(state) {
         : state.courses.map((course) => {
             return {
               ...course,
-              authorName: state.authors.find((a) => a.id === course.authorId).name,
+              authorName: state.authors.find((a) => a.id === course.authorId)
+                .name,
             };
           }),
     loading: state.apiCallsInProgress > 0,

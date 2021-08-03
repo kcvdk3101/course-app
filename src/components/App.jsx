@@ -5,7 +5,7 @@ import AboutPage from "./about/AboutPage.jsx";
 import Header from "./common/Header.jsx";
 import PageNotFound from "./PageNotFound.jsx";
 import CoursesPage from "./courses/CoursesPage.jsx";
-import ManageCoursePage from "./courses/ManageCoursePage.jsx";
+import ManageCourseForm from "./courses/ManageCourseForm.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -17,8 +17,8 @@ const App = () => {
         <Route exact path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/courses" component={CoursesPage} />
-        <Route path="/course/:slug" component={ManageCoursePage} />
-        <Route path="/course" component={ManageCoursePage} />
+        <Route path="/course/:slug" component={ManageCourseForm} />
+        <Route path="/course" component={ManageCourseForm} />
         <Route component={PageNotFound} />
       </Switch>
       <ToastContainer autoClose={2000} hideProgressBar />

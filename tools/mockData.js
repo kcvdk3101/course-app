@@ -1,78 +1,65 @@
 const courses = [
   {
     id: 1,
-    title: "Securing React Apps with Auth0",
-    slug: "react-auth0-authentication-security",
+    title: "Giới thiệu khóa Javascript nâng cao - Javascript advanced",
+    slug: "4UZrsTqkcW4",
     authorId: 1,
-    category: "JavaScript"
+    category: "JavaScript Advanced"
   },
   {
     id: 2,
-    title: "React: The Big Picture",
-    slug: "react-big-picture",
+    title: "IIFE là gì? Khái niệm IIFE trong Javascript | Immediately invoked function expression | Lập trình JS",
+    slug: "N-3GU1F1UBY&list=PL_-VfJajZj0U1MSx1IMu13oLJq2nM97ac&index=2",
     authorId: 1,
-    category: "JavaScript"
+    category: "JavaScript Advanced"
   },
   {
     id: 3,
-    title: "Creating Reusable React Components",
-    slug: "react-creating-reusable-components",
+    title: "Scope trong Javascript là gì?",
+    slug: "5N8vz_VmszE&list=PL_-VfJajZj0U1MSx1IMu13oLJq2nM97ac&index=3",
     authorId: 1,
-    category: "JavaScript"
+    category: "JavaScript Advanced"
   },
   {
     id: 4,
-    title: "Building a JavaScript Development Environment",
-    slug: "javascript-development-environment",
+    title: "Closure là gì? Javascript closure?",
+    slug: "xtQtGKL0NCI&list=PL_-VfJajZj0U1MSx1IMu13oLJq2nM97ac&index=4",
     authorId: 1,
-    category: "JavaScript"
+    category: "JavaScript Advanced"
   },
   {
     id: 5,
-    title: "Building Applications with React and Redux",
-    slug: "react-redux-react-router-es6",
+    title: "HOISTING TRONG JAVASCRIPT LÀ GÌ???",
+    slug: "3MLhU1DrUxM&list=PL_-VfJajZj0U1MSx1IMu13oLJq2nM97ac&index=5",
     authorId: 1,
-    category: "JavaScript"
+    category: "JavaScript Advanced"
   },
   {
     id: 6,
-    title: "Building Applications in React and Flux",
-    slug: "react-flux-building-applications",
+    title: "STRICT MODE TRONG JAVASCRIPT??? - CHẾ ĐỘ NGHIÊM NGẶT TRONG JAVASCRIPT???",
+    slug: "w1W-j4cSPF0&list=PL_-VfJajZj0U1MSx1IMu13oLJq2nM97ac&index=6",
     authorId: 1,
-    category: "JavaScript"
+    category: "JavaScript Advanced"
   },
   {
     id: 7,
-    title: "Clean Code: Writing Code for Humans",
-    slug: "writing-clean-code-humans",
+    title: "VALUE TYPES & REFERENCE TYPES | THAM TRỊ VÀ THAM CHIẾU JAVASCRIPT",
+    slug: "n4tS1Q5-EzY&list=PL_-VfJajZj0U1MSx1IMu13oLJq2nM97ac&index=7",
     authorId: 1,
-    category: "Software Practices"
+    category: "JavaScript Advanced"
   },
   {
     id: 8,
-    title: "Architecting Applications for the Real World",
-    slug: "architecting-applications-dotnet",
+    title: "THIS KEYWORD - TỪ KHOÁ THIS TRONG JAVASCRIPT",
+    slug: "ii1Ra_zLDIo&list=PL_-VfJajZj0U1MSx1IMu13oLJq2nM97ac&index=8",
     authorId: 1,
-    category: "Software Architecture"
+    category: "JavaScript Advanced"
   },
-  {
-    id: 9,
-    title: "Becoming an Outlier: Reprogramming the Developer Mind",
-    slug: "career-reboot-for-developer-mind",
-    authorId: 1,
-    category: "Career"
-  },
-  {
-    id: 10,
-    title: "Web Component Fundamentals",
-    slug: "web-components-shadow-dom",
-    authorId: 1,
-    category: "HTML5"
-  }
+
 ];
 
 const authors = [
-  { id: 1, name: "Cory House" },
+  { id: 1, name: "F8 Official" },
   { id: 2, name: "Scott Allen" },
   { id: 3, name: "Dan Wahlin" }
 ];
