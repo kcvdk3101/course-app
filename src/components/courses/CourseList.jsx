@@ -23,7 +23,6 @@ const CourseList = ({
       </thead>
       <tbody>
         {courses.map((course) => {
-          console.log(`https://www.youtube.com/watch?v=${course.slug}`);
           return (
             <tr key={course.id}>
               <td>
@@ -33,14 +32,16 @@ const CourseList = ({
                 >
                   Watch
                 </button>
-                {openModalVideo ? (
+              </td>
+              {openModalVideo ? (
+                <td>
                   <ModalVideo
-                    url={`https://www.youtube.com/watch?v=${course.slug}`}
+                    url={`${YOUTUBE_BASE_URL}${course.slug}`}
                     openModalVideo={openModalVideo}
                     handleOpenModalVideo={handleOpenModalVideo}
                   />
-                ) : null}
-              </td>
+                </td>
+              ) : null}
               <td>
                 <Link to={"/course/" + course.slug}>{course.title}</Link>
               </td>
