@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import ModalVideo from "../../components/ModalVideo.jsx.js.js";
-import { YOUTUBE_BASE_URL } from "../../../constant.js";
+import ModalVideo from "../../components/ModalVideo.jsx";
+import { YOUTUBE_BASE_URL } from "../../constants/constant.js";
 
 const CourseList = ({
   courses,

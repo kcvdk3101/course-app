@@ -29,10 +29,10 @@ const courses = [
   },
   {
     id: 5,
-    title: "HOISTING TRONG JAVASCRIPT LÀ GÌ???",
-    slug: "3MLhU1DrUxM",
+    title: "Sleep Chill Vibes",
+    slug: "YPWG-GhyrZY",
     authorId: 1,
-    category: "JavaScript Advanced"
+    category: "Music"
   },
   {
     id: 6,
@@ -66,11 +66,24 @@ const courses = [
 ];
 
 const authors = [
-  { id: 1, name: "F8 Official" },
   {
-    id: 2, name: "freeCodeCamp.org"
+    id: 1,
+    name: "F8 Official",
+    description: "F8 là cộng đồng học tập và chia sẻ kiến thức lập trình dành cho tất cả mọi người.Các khóa học đều được đầu tư kỹ lưỡng về mặt.",
+    thumbnailSrc: "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffullstack.edu.vn%2Fauthors%2Fson-dang&psig=AOvVaw0iUueJ-BTZ_GrFiJJ2hmI2&ust=1628604671377000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNiuiKqPpPICFQAAAAAdAAAAABAU"
   },
-  { id: 3, name: "Rhythm" },
+  {
+    id: 2,
+    name: "freeCodeCamp.org",
+    description: "Learn to code for free",
+    thumbnailSrc: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUC8butISFwT-Wl7EV0hUK0BQ&psig=AOvVaw3eo41FFuIG18uWzid9cXE2&ust=1628604772899000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLCEwtmPpPICFQAAAAAdAAAAABAD",
+  },
+  {
+    id: 3,
+    name: "Rythm",
+    description: "Rythm Music Channel ",
+    thumbnailSrc: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgummybearpills.fandom.com%2Fwiki%2FNO_U_(Bot)&psig=AOvVaw3SBukaBG3cPCbIDOZwlFrR&ust=1628604785447000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMC4jOCPpPICFQAAAAAdAAAAABAI"
+  },
 ];
 
 const newCourse = {

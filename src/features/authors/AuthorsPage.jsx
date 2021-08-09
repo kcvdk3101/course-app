@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { authorsActions } from "../../redux/actions/authorsActions";
 import { toast } from "react-toastify";
-import Spinner from "../../components/Spinner.jsx.js.js";
+import Spinner from "../../components/Spinner.jsx";
 import ManageAuthorList from "./ManageAuthorList.jsx";
 
 export const AuthorsPage = ({ authors, getAuthors, loading }) => {
