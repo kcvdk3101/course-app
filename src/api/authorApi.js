@@ -10,3 +10,16 @@ export async function getAuthors() {
     throw new Error(error.response.message)
   }
 }
+
+export async function saveAuthor(author) {
+  try {
+    await axios({
+      method: author.id ? "PUT" : "POST",
+      url: baseUrl + (author.id || ""),
+      headers: { "content-type": "application/json" },
+      data: JSON.stringify(author)
+    })
+  } catch (error) {
+    throw new Error(error)
+  }
+}

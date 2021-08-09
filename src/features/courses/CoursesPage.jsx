@@ -39,13 +39,15 @@ const CoursesPage = ({
   return (
     <>
       {redirectToAddCoursePage && <Redirect to="/course" />}
-      <h1>Courses</h1>
-      <button
-        className="btn btn-primary my-2"
-        onClick={() => setRedirectToAddCoursePage(true)}
-      >
-        Add course
-      </button>
+      <div>
+        <h1>Courses</h1>
+        <button
+          className="btn btn-primary my-2"
+          onClick={() => setRedirectToAddCoursePage(true)}
+        >
+          Add course
+        </button>
+      </div>
       {loading ? (
         <Spinner />
       ) : courses.length === 0 ? (

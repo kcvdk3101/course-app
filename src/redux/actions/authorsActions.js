@@ -22,4 +22,28 @@ function getAuthorsSuccessfully(authors) {
   }
 }
 
-export const authorsActions = { getAuthors }
+function saveAuthor(author) {
+  return async function (dispatch) {
+    dispatch(apiStatusActions.beginApiCall())
+    try {
+      const data = await authorApi.saveAuthor(author)
+      console.log(data);
+      dispatch(saveAuthorSuccessfully(data))
+    } catch (error) {
+      dispatch(apiStatusActions.apiCallError())
+      throw new Error(error.message)
+    }
+  }
+}
+
+function saveAuthorSuccessfully(author) {
+  if (author.id) return { type: actionTypes.UPDATE_AUTHOR_SUCCESSFULLY, author };
+  return {
+    type: actionTypes.CREATE_AUTHOR_SUCCESSFULLY,
+    author
+  }
+}
+
+
+
+export const authorsActions = { getAuthors, saveAuthor }

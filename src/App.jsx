@@ -25,6 +25,8 @@ const App = () => {
 
         {/* Authors Page  */}
         <Route path="/authors" component={AuthorsPage} />
+        <Route path="/author/:id" component={ManageCourseForm} />
+        <Route path="/author" component={ManageCourseForm} />
 
         <Route component={PageNotFound} />
       </Switch>

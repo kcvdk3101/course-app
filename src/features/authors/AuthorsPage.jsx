@@ -23,17 +23,19 @@ export const AuthorsPage = ({ authors, getAuthors, loading }) => {
   return (
     <>
       {redirectToAddAuthorPage && <Redirect to="/author" />}
-      <h1>Authors</h1>
-      <button
-        className="btn btn-primary my-2"
-        onClick={() => setRedirectToAddAuthorPage(true)}
-      >
-        Add new author
-      </button>
+      <div className="mb-4">
+        <h1>Authors</h1>
+        <button
+          className="btn btn-primary my-2"
+          onClick={() => setRedirectToAddAuthorPage(true)}
+        >
+          Add new author
+        </button>
+      </div>
       {loading ? (
         <Spinner />
       ) : authors.length === 0 ? (
-        <h2>No more courses</h2>
+        <h2>Nobody is home!</h2>
       ) : (
         <ManageAuthorList authors={authors} />
       )}

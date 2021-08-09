@@ -31,7 +31,7 @@ const courses = [
     id: 5,
     title: "Sleep Chill Vibes",
     slug: "YPWG-GhyrZY",
-    authorId: 1,
+    authorId: 3,
     category: "Music"
   },
   {
