@@ -6,7 +6,7 @@ import { coursesActions } from "../../redux/actions/coursesActions";
 import { authorsActions } from "../../redux/actions/authorsActions";
 import { newCourse } from "../../../tools/mockData";
 import CourseForm from "./CourseForm.jsx";
-import Spinner from "../common/Spinner.jsx";
+import Spinner from "../../components/Spinner.jsx.js.js";
 import { toast } from "react-toastify";
 
 function ManageCoursePage({

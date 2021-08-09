@@ -1,5 +1,5 @@
 import axios from "axios";
-import { REACT_APP_API_URL } from "../constant";
+import { REACT_APP_API_URL } from "../constants/constant";
 const baseUrl = REACT_APP_API_URL + "/courses/";
 
 export async function getCourses() {

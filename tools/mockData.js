@@ -1,10 +1,10 @@
 const courses = [
   {
     id: 1,
-    title: "Giới thiệu khóa Javascript nâng cao - Javascript advanced",
+    title: "Full React Course 2020",
     slug: "4UZrsTqkcW4",
-    authorId: 1,
-    category: "JavaScript Advanced"
+    authorId: 2,
+    category: "React JS"
   },
   {
     id: 2,
@@ -59,7 +59,7 @@ const courses = [
     id: 9,
     title: "LO:FI",
     slug: "e97w-GHsRMY",
-    authorId: 2,
+    authorId: 3,
     category: "Music"
   },
 
@@ -67,7 +67,10 @@ const courses = [
 
 const authors = [
   { id: 1, name: "F8 Official" },
-  { id: 2, name: "Music Study" },
+  {
+    id: 2, name: "freeCodeCamp.org"
+  },
+  { id: 3, name: "Rhythm" },
 ];
 
 const newCourse = {

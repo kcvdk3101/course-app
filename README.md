@@ -12,7 +12,19 @@
 - [ ] Revert abandoned changes
 - [ ] Clean code
 
-### Production Dependencies
+## Folder Structure
+
+| **Name**   | **Meaning**                        |
+| ---------- | ---------------------------------- |
+| api        | Call API                           |
+| components | Components are shared for features |
+| constants  | Has all constant variables         |
+| features   | Has all features in Application    |
+| hooks      | Includes Global hooks              |
+| redux      | Redux Library                      |
+| utils      | Includes Global function           |
+
+## Production Dependencies
 
 | **Dependency**   | **Use**                                              |
 | ---------------- | ---------------------------------------------------- |
@@ -28,7 +40,7 @@
 | redux-thunk      | Async redux library                                  |
 | reselect         | Memoize selectors for performance                    |
 
-### Development Dependencies
+## Development Dependencies
 
 | **Dependency**                     | **Use**                                                          |
 | ---------------------------------- | ---------------------------------------------------------------- |

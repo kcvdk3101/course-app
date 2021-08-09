@@ -5,16 +5,17 @@ import CourseList from "./CourseList.jsx";
 function ManageCourseList({ courses, onDelete }) {
   const [openModalVideo, setOpenModalVideo] = useState(false);
 
-  const handleOpenModalVideo = () => {
+  const handleModalVideo = () => {
     setOpenModalVideo(!openModalVideo);
   };
 
+  console.log(openModalVideo);
   return (
     <CourseList
       courses={courses}
       onDelete={onDelete}
       openModalVideo={openModalVideo}
-      handleOpenModalVideo={handleOpenModalVideo}
+      handleModalVideo={handleModalVideo}
     />
   );
 }

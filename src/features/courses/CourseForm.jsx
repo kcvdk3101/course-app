@@ -1,9 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import TextInput from "../common/TextInput.jsx";
-import SelectInput from "../common/SelectInput.jsx";
+import TextInput from "../../components/TextInput.jsx.js.js";
+import SelectInput from "../../components/SelectInput.jsx.js.js";
 
-const CourseForm = ({ course, authors, onSave, onChange, saving, errors = {} }) => {
+const CourseForm = ({
+  course,
+  authors,
+  onSave,
+  onChange,
+  saving,
+  errors = {},
+}) => {
   return (
     <form onSubmit={onSave}>
       <h2>{course.id ? "Edit" : "Add"} Course</h2>

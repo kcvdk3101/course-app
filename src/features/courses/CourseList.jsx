@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import ModalVideo from "../common/ModalVideo.jsx";
+import ModalVideo from "../../components/ModalVideo.jsx.js.js";
 import { YOUTUBE_BASE_URL } from "../../../constant.js";
 
 const CourseList = ({
   courses,
   onDelete,
   openModalVideo,
-  handleOpenModalVideo,
+  handleModalVideo,
 }) => {
   return (
     <table className="table">
@@ -28,19 +28,17 @@ const CourseList = ({
               <td>
                 <button
                   className="btn btn-light"
-                  onClick={() => handleOpenModalVideo()}
+                  onClick={() => handleModalVideo()}
                 >
                   Watch
                 </button>
               </td>
               {openModalVideo ? (
-                <td>
-                  <ModalVideo
-                    url={`${YOUTUBE_BASE_URL}${course.slug}`}
-                    openModalVideo={openModalVideo}
-                    handleOpenModalVideo={handleOpenModalVideo}
-                  />
-                </td>
+                <ModalVideo
+                  url={`${YOUTUBE_BASE_URL}${course.slug}`}
+                  openModalVideo={openModalVideo}
+                  handleModalVideo={handleModalVideo}
+                />
               ) : null}
               <td>
                 <Link to={"/course/" + course.slug}>{course.title}</Link>
@@ -67,7 +65,7 @@ CourseList.propTypes = {
   courses: PropTypes.array.isRequired,
   onDelete: PropTypes.func.isRequired,
   openModalVideo: PropTypes.bool.isRequired,
-  handleOpenModalVideo: PropTypes.func.isRequired,
+  handleModalVideo: PropTypes.func.isRequired,
 };
 
 export default CourseList;

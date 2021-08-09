@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { coursesActions } from "../../redux/actions/coursesActions";
 import { authorsActions } from "../../redux/actions/authorsActions";
 import { toast } from "react-toastify";
-import Spinner from "../common/Spinner.jsx";
+import Spinner from "../../components/Spinner.jsx.js.js";
 import ManageCourseList from "./ManageCourseList.jsx";
 
 const CoursesPage = ({
