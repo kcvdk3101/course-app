@@ -6,35 +6,38 @@ import {
   CardImg,
   CardTitle,
   CardText,
-  CardDeck,
   CardBody,
-  ButtonGroup,
+  Container,
+  Row,
+  Col,
 } from "reactstrap";
 
 function ManageAuthorList({ authors }) {
   return (
-    <CardDeck>
-      {authors.map((author) => {
-        return (
-          <Card key={author.id}>
-            <CardImg
-              top
-              width="100%"
-              src={author.thumbnailSrc}
-              alt={author.name}
-            />
-            <CardBody>
-              <CardTitle tag="h5">{author.name}</CardTitle>
-              <CardText>{author.description}</CardText>
-              <ButtonGroup size="lg">
-                <Button>Edit</Button>
-                <Button>Button</Button>
-              </ButtonGroup>
-            </CardBody>
-          </Card>
-        );
-      })}
-    </CardDeck>
+    <Container>
+      <Row>
+        {authors.map((author) => {
+          return (
+            <Col key={author.id}>
+              <Card>
+                <CardBody>
+                  <CardImg
+                    top
+                    height="100%"
+                    src={author.thumbnailSrc}
+                    alt={author.name}
+                  />
+                  <CardTitle tag="h5">{author.name}</CardTitle>
+                  <CardText>{author.description}</CardText>
+                  <Button style={{ marginRight: 5 }}>Edit</Button>
+                  <Button>Button</Button>
+                </CardBody>
+              </Card>
+            </Col>
+          );
+        })}
+      </Row>
+    </Container>
   );
 }
 

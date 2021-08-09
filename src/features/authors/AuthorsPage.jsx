@@ -25,7 +25,7 @@ export const AuthorsPage = ({ authors, getAuthors, loading }) => {
       {redirectToAddAuthorPage && <Redirect to="/author" />}
       <h1>Authors</h1>
       <button
-        className="btn btn-primary"
+        className="btn btn-primary my-2"
         onClick={() => setRedirectToAddAuthorPage(true)}
       >
         Add new author

@@ -41,7 +41,7 @@ const CoursesPage = ({
       {redirectToAddCoursePage && <Redirect to="/course" />}
       <h1>Courses</h1>
       <button
-        className="btn btn-primary"
+        className="btn btn-primary my-2"
         onClick={() => setRedirectToAddCoursePage(true)}
       >
         Add course
