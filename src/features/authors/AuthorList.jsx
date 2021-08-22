@@ -25,7 +25,12 @@ function AuthorList({ authors }) {
                 </div>
                 <div>
                   <ButtonToggle color="primary" onClick={() => {}}>
-                    <Link to={"/author/" + author.id}>Edit</Link>
+                    <Link
+                      to={"/author/" + author.id}
+                      style={{ color: "white" }}
+                    >
+                      Edit
+                    </Link>
                   </ButtonToggle>{" "}
                   <ButtonToggle color="danger">Delete</ButtonToggle>
                 </div>

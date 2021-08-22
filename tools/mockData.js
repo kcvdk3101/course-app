@@ -93,8 +93,16 @@ const newCourse = {
   category: ""
 };
 
+const newAuthor = {
+  id: null,
+  name: "",
+  description: "",
+  thumbnailSrc: ""
+}
+
 module.exports = {
   newCourse,
+  newAuthor,
   courses,
   authors
 };

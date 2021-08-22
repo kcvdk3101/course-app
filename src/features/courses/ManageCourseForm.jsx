@@ -9,7 +9,7 @@ import CourseForm from "./CourseForm.jsx";
 import Spinner from "../../components/Spinner.jsx";
 import { toast } from "react-toastify";
 
-function ManageCoursePage({
+function ManageCourseForm({
   courses,
   authors,
   loadCourses,
@@ -82,7 +82,7 @@ function ManageCoursePage({
   );
 }
 
-ManageCoursePage.propTypes = {
+ManageCourseForm.propTypes = {
   course: PropTypes.object.isRequired,
   courses: PropTypes.array.isRequired,
   authors: PropTypes.array.isRequired,
@@ -115,4 +115,4 @@ const mapDispatchToProps = {
   getAuthors: authorsActions.getAuthors,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ManageCoursePage);
+export default connect(mapStateToProps, mapDispatchToProps)(ManageCourseForm);

@@ -9,6 +9,7 @@ import ManageCourseForm from "./features/courses/ManageCourseForm.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AuthorsPage from "./features/authors/AuthorsPage.jsx";
+import ManageAuthorForm from "./features/authors/ManageAuthorForm.jsx";
 
 const App = () => {
   return (
@@ -23,10 +24,10 @@ const App = () => {
         <Route path="/course/:slug" component={ManageCourseForm} />
         <Route path="/course" component={ManageCourseForm} />
 
-        {/* Authors Page  */}
+        {/* Authors Page */}
         <Route path="/authors" component={AuthorsPage} />
-        <Route path="/author/:id" component={ManageCourseForm} />
-        <Route path="/author" component={ManageCourseForm} />
+        <Route path="/author/:id" component={ManageAuthorForm} />
+        <Route path="/author" component={ManageAuthorForm} />
 
         <Route component={PageNotFound} />
       </Switch>
