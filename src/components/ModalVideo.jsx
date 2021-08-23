@@ -11,8 +11,11 @@ function ModalVideo({ url, openModalVideo, handleModalVideo }) {
       toggle={handleModalVideo}
       backdrop={true}
       centered={true}
+      style={{ position: "relative" }}
     >
-      <ReactPlayer url={url} controls={true} />
+      <div className="react-player">
+        <ReactPlayer url={url} controls={true} />
+      </div>
     </Modal>
   );
 }

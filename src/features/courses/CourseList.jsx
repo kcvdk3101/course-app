@@ -5,6 +5,7 @@ import ModalVideo from "../../components/ModalVideo.jsx";
 import { YOUTUBE_BASE_URL } from "../../constants/constant.js";
 
 const CourseList = ({
+  currentSlug,
   courses,
   onDelete,
   openModalVideo,
@@ -28,14 +29,14 @@ const CourseList = ({
               <td>
                 <button
                   className="btn btn-light"
-                  onClick={() => handleModalVideo()}
+                  onClick={() => handleModalVideo(course.slug)}
                 >
                   Watch
                 </button>
               </td>
               {openModalVideo ? (
                 <ModalVideo
-                  url={`${YOUTUBE_BASE_URL}${course.slug}`}
+                  url={`${YOUTUBE_BASE_URL}${currentSlug.current}`}
                   openModalVideo={openModalVideo}
                   handleModalVideo={handleModalVideo}
                 />
@@ -62,6 +63,7 @@ const CourseList = ({
 };
 
 CourseList.propTypes = {
+  currentSlug: PropTypes.string,
   courses: PropTypes.array.isRequired,
   onDelete: PropTypes.func.isRequired,
   openModalVideo: PropTypes.bool.isRequired,

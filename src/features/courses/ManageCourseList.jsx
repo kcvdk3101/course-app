@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import PropTypes from "prop-types";
 import CourseList from "./CourseList.jsx";
 
 function ManageCourseList({ courses, onDelete }) {
   const [openModalVideo, setOpenModalVideo] = useState(false);
+  const currentSlug = useRef("");
 
-  const handleModalVideo = () => {
+  const handleModalVideo = (data) => {
+    currentSlug.current = data;
     setOpenModalVideo(!openModalVideo);
   };
 
-  console.log(openModalVideo);
   return (
     <CourseList
+      currentSlug={currentSlug}
       courses={courses}
       onDelete={onDelete}
       openModalVideo={openModalVideo}
