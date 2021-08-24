@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 export const ManageAuthorForm = ({ getAuthors, authors, ...props }) => {
   const [author, setAuthor] = useState({ ...props.author });
   const [saving, setSaving] = useState(false);
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     if (authors.length === 0) {
@@ -19,13 +20,24 @@ export const ManageAuthorForm = ({ getAuthors, authors, ...props }) => {
     }
   }, []);
 
+  function formIsValid() {
+    const { id, name, description } = author;
+    const error = {};
+    if (!name) error.title = "Name is required!";
+    if (!description) error.author = "Give a bio!";
+
+    setErrors(error);
+    //Form is valid if the error object still has no properties
+    return Object.keys(errors).length === 0;
+  }
+
   const handleChange = (event) => {
     console.log(event.target.value);
     const { name, value } = event.target;
-    // setAuthor((prevAuthor) => ({
-    //   ...prevAuthor,
-    //   [name]: name === "authorId" ? parseInt(value, 10) : value,
-    // }));
+    setAuthor((prevAuthor) => ({
+      ...prevAuthor,
+      [name]: name === "id" ? parseInt(value, 10) : value,
+    }));
   };
 
   const handleSaveCourse = async (event) => {
@@ -33,6 +45,8 @@ export const ManageAuthorForm = ({ getAuthors, authors, ...props }) => {
     //setSaving(true);
     toast.success("Save author successfully !");
   };
+
+  console.log(author);
 
   return authors.length === 0 ? (
     <Spinner />

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import TextInput from "../../components/TextInput.jsx";
+import FieldErrorMessage from "../../components/FieldErrorMessage.jsx";
 
 function AuthorForm({ author, onChange, onSave, saving, errors = {} }) {
   return (
@@ -9,16 +10,16 @@ function AuthorForm({ author, onChange, onSave, saving, errors = {} }) {
       <TextInput
         name="name"
         label="Author Name"
-        value={author.name}
         onChange={onChange}
+        placeholder="Please enter author name"
         error={errors.name}
       />
 
       <TextInput
         name="description"
         label="Short Description"
-        value={author.description}
         onChange={onChange}
+        placeholder="Make short description"
         error={errors.description}
       />
 
